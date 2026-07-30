@@ -12,7 +12,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*", "https://crona-ai-ygq1.vercel.app/"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://crona-ai-ygq1.vercel.app",
+    ]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
