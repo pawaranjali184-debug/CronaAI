@@ -1,0 +1,155 @@
+/* ============================================
+   CronaAI — Auth Pages (Login / Register)
+   ============================================ */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background orbs */
+.auth-page::before,
+.auth-page::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.auth-page::before {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-primary);
+  top: -100px;
+  right: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.auth-page::after {
+  width: 350px;
+  height: 350px;
+  background: var(--accent-secondary);
+  bottom: -80px;
+  left: -80px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-heavy);
+  -webkit-backdrop-filter: var(--glass-blur-heavy);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.5s ease;
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.auth-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-gradient);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-bold);
+  font-size: var(--text-xl);
+  color: white;
+}
+
+.auth-logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-2);
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-8);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.auth-form .btn {
+  margin-top: var(--space-2);
+  padding: var(--space-4);
+  font-size: var(--text-base);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+.auth-footer a {
+  color: var(--text-accent);
+  font-weight: var(--font-medium);
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-error {
+  background: var(--error-light);
+  color: var(--error);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-primary);
+}
