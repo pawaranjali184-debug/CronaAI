@@ -13,3 +13,5 @@ pydantic_settings
 pydantic[email]
 email_validator
 groq
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.3
